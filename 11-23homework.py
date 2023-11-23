@@ -4,13 +4,15 @@ class Employee:
         self.id = id
         self.salary = salary
         self.department = department
-        
+
+    #Use assign_department to replace obviously department
     def assign_department(self , new_department):
         self.department = new_department
 
     def print_detail(self):
         print('{} {} {} {} '.format(self.name , self.id , self.salary , self.department))
 
+    #Calculate the salary if someone's worktime over 50h
     def overtime_bonus(self ,salary , worktime):
         overtime = 0
         if worktime > 50 :
