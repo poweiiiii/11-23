@@ -27,7 +27,7 @@ emp2 = Employee("JONES", "E7499", 45000, "RESEARCH" )
 emp3 = Employee("MARTIN", "E7900", 50000, "SALES")
 emp4 = Employee("SMITH", "E7698", 55000, "OPERATIONS" )
 
-#Employee2's and Employee4's worktime were over 50h , sp their salary will be change
+#Employee2's and Employee4's worktime were over 50h , so their salary will be change
 emp2.overtime_bonus(45000 ,56)
 emp4.overtime_bonus(55000 , 59)       
 
