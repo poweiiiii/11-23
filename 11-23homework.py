@@ -4,30 +4,32 @@ class Employee:
         self.id = id
         self.salary = salary
         self.department = department
-    def Employee_1(self):
-        self.name = 'ADAMS'
-        self.id = 'E7876'
-        self.salary = 50000
-        self.department = 'ACCOUNTING'
-        print('{} {} {} {}'.format(self.name , self.id , self.salary , self.department))
-    def Employee_2(self):
-        self.name = 'JONES'
-        self.id = 'E7499'
-        self.salary = 45000
-        self.department = 'RESEARCH'
-    def Employee_3(self):
-        self.name = 'MARTIN'
-        self.id = 'E7900'
-        self.salary = 50000
-        self.department = 'SALES'
-    def Employee_4(self):
-        self.name = 'SMITH'
-        self.id = 'E7698'
-        self.salary = 55000
-        self.department = 'OPERATIONS'
+        
+    def assign_department(self , new_department):
+        self.department = new_department
 
-    def new_assign_department(self):
-        self.assign_department = self.department
-        print(self.assign_department)
-emp = Employee()
-emp.Employee_1()
+    def print_detail(self):
+        print('{} {} {} {} '.format(self.name , self.id , self.salary , self.department))
+
+    def overtime_bonus(self ,salary , worktime):
+        overtime = 0
+        if worktime > 50 :
+            overtime = worktime - 50 
+        self.salary = self.salary + (overtime * (self.salary / 50))
+
+emp1 = Employee("ADAMS", "E7876", 50000, "ACCOUNTING" )
+emp2 = Employee("JONES", "E7499", 45000, "RESEARCH" )
+emp3 = Employee("MARTIN", "E7900", 50000, "SALES")
+emp4 = Employee("SMITH", "E7698", 55000, "OPERATIONS" )
+
+emp2.overtime_bonus(45000 ,63)
+emp4.overtime_bonus(55000 , 59)       
+
+emp2.assign_department('SALES')
+
+
+emp1.print_detail()
+emp2.print_detail()
+emp3.print_detail()
+emp4.print_detail()
+
