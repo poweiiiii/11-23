@@ -1,14 +1,15 @@
 class Employee:
-    def __init__(self , emp_name, emp_id,emp_salary ,emp_department  ):
-        self.name = emp_name
-        self.id = emp_id
-        self.salary = emp_salary
-        self.department = emp_department
+    def __init__(self ,name, id,salary ,department):
+        self.name = name
+        self.id = id
+        self.salary = salary
+        self.department = department
     def Employee_1(self):
         self.name = 'ADAMS'
         self.id = 'E7876'
         self.salary = 50000
         self.department = 'ACCOUNTING'
+        print('{} {} {} {}'.format(self.name , self.id , self.salary , self.department))
     def Employee_2(self):
         self.name = 'JONES'
         self.id = 'E7499'
@@ -28,6 +29,5 @@ class Employee:
     def new_assign_department(self):
         self.assign_department = self.department
         print(self.assign_department)
-
-emp1 = Employee()
-emp1.new_assign_department()
+emp = Employee()
+emp.Employee_1()
