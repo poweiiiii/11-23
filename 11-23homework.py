@@ -5,7 +5,7 @@ class Employee:
         self.salary = salary
         self.department = department
 
-    #Use assign_department to replace obviously department
+    #Use assign_department to replace original department
     def assign_department(self , new_department):
         self.department = new_department
 
